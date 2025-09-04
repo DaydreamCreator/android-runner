@@ -47,6 +47,14 @@ If Android Runner is helping your research, consider to cite it as follows, than
 ## Setup
 Instructions can be found [here](https://github.com/S2-group/android-runner/wiki/Setup). Instructions for specific plugins are included in the plugins' READMEs.
 
+###Mac
+With homebrew installed
+if formulae outdated found in `brew`, can try `brew update && brew upgrade`.
+And run:
+``` 
+brew install --cask temurin@8 android-studio android-platform-tools
+```
+
 ## Quick Start
 To run an experiment, run:
 ```bash
