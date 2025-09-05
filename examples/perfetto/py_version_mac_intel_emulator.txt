@@ -1,3 +1,12 @@
+(greenlab_py38) cc3@cc3deMacBook-Pro GreenLab % python3 android-runner android-runner/examples/perfetto/config.json
+ExperimentFactory: /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/config.json
+Device: Setting logcat buffer size to 57344K
+Loading module before_experiment.py from /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/Scripts/before_experiment.py
+Loading module before_run.py from /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/Scripts/before_run.py
+Loading module after_launch.py from /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/Scripts/after_launch.py
+Loading module interaction.py from /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/Scripts/interaction.py
+Loading module before_close.py from /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/Scripts/before_close.py
+Loading module after_run.py from /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/Scripts/after_run.py
 Loading module after_experiment.py from /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/Scripts/after_experiment.py
 NativeExperiment: Device: Pixel 6 (emulator-5554, Android 16, API level 36)
 Profilers: Loading
@@ -63,4 +72,4 @@ AttributeError: 'NoneType' object has no attribute 'terminate'
 NativeExperiment: AttributeError: 'NoneType' object has no attribute 'terminate'
 Profilers: Stop profiling
 root: AttributeError: 'NoneType' object has no attribute 'terminate'
-root: An error occurred, the experiment has been stopped.
+root: An error occurred, the experiment has been stopped. To continue, add progress file argument to experiment startup: --progress /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/output/2025.09.05_121913/progress.xml
