@@ -1,0 +1,66 @@
+Loading module after_experiment.py from /Users/cc3/Documents/VU_y2/GreenLab/android-runner/examples/perfetto/Scripts/after_experiment.py
+NativeExperiment: Device: Pixel 6 (emulator-5554, Android 16, API level 36)
+Profilers: Loading
+Device: Default unplug
+Traceback (most recent call last):
+  File "/Users/cc3/Documents/VU_y2/GreenLab/android-runner/AndroidRunner/Script.py", line 60, in run
+    p.start()
+    ~~~~~~~^^
+  File "/opt/miniconda3/envs/greenlab_py38/lib/python3.13/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+                  ~~~~~~~~~~~^^^^^^
+  File "/opt/miniconda3/envs/greenlab_py38/lib/python3.13/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/greenlab_py38/lib/python3.13/multiprocessing/context.py", line 289, in _Popen
+    return Popen(process_obj)
+  File "/opt/miniconda3/envs/greenlab_py38/lib/python3.13/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/greenlab_py38/lib/python3.13/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/greenlab_py38/lib/python3.13/multiprocessing/popen_spawn_posix.py", line 47, in _launch
+    reduction.dump(process_obj, fp)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/greenlab_py38/lib/python3.13/multiprocessing/reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+TypeError: cannot pickle 'module' object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/cc3/Documents/VU_y2/GreenLab/android-runner/AndroidRunner/Experiment.py", line 82, in start
+    self.run_experiment(current_run)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/cc3/Documents/VU_y2/GreenLab/android-runner/AndroidRunner/Experiment.py", line 107, in run_experiment
+    self.prepare_run(current_run)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/cc3/Documents/VU_y2/GreenLab/android-runner/AndroidRunner/Experiment.py", line 113, in prepare_run
+    self.first_run_device(current_run)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/cc3/Documents/VU_y2/GreenLab/android-runner/AndroidRunner/Experiment.py", line 166, in first_run_device
+    self.before_experiment(device)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/cc3/Documents/VU_y2/GreenLab/android-runner/AndroidRunner/NativeExperiment.py", line 25, in before_experiment
+    super(NativeExperiment, self).before_experiment(device)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/cc3/Documents/VU_y2/GreenLab/android-runner/AndroidRunner/Experiment.py", line 213, in before_experiment
+    self.scripts.run('before_experiment', device, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cc3/Documents/VU_y2/GreenLab/android-runner/AndroidRunner/Scripts.py", line 36, in run
+    script.run(device, *args, **kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cc3/Documents/VU_y2/GreenLab/android-runner/AndroidRunner/Script.py", line 74, in run
+    p.terminate()
+    ~~~~~~~~~~~^^
+  File "/opt/miniconda3/envs/greenlab_py38/lib/python3.13/multiprocessing/process.py", line 133, in terminate
+    self._popen.terminate()
+    ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'terminate'
+
+NativeExperiment: AttributeError: 'NoneType' object has no attribute 'terminate'
+Profilers: Stop profiling
+root: AttributeError: 'NoneType' object has no attribute 'terminate'
+root: An error occurred, the experiment has been stopped.
